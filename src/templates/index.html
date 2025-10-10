@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Arts and Talents Promotion{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Arts and Talents Promotion Platform!</h1>
+
+    <div class="profile">
+            <h2>Artist Profile</h2>
+            <img src="{{ url_for('static', filename=artist.profile_pic) }}" alt="Profile Picture" class="profile-pic">
+            <p><strong>Name:</strong> {{ artist.name }}</p>
+            <p><strong>Genre:</strong> {{ artist.genre }}</p>
+            <p><strong>Location:</strong> {{ artist.location }}</p>
+
+            <div class="media-section">
+                <h3>Featured Video</h3>
+                <video controls>
+                    <source src="{{ url_for('static', filename=artist.video) }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="media-section">
+                <h3>Featured Audio</h3>
+                <audio controls>
+                    <source src="{{ url_for('static', filename=artist.audio) }}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </div>
+
+            <h3>Portfolio</h3>
+            <ul class="portfolio">
+                {% for piece in artist.portfolio %}
+                <li>{{ piece }}</li>
+                {% endfor %}
+            </ul>
+    </div>
+
+    <div class="camera-section">
+        <h3>Camera Access</h3>
+        <p>Use this feature to capture a new profile picture or record a video.</p>
+        <button id="start-camera">Start Camera</button>
+        <video id="camera-stream" autoplay style="width: 100%; margin-top: 10px; display: none;"></video>
+    </div>
+
+    <script>
+        const startCameraButton = document.getElementById('start-camera');
+        const cameraStream = document.getElementById('camera-stream');
+
+        startCameraButton.addEventListener('click', async () => {
+            if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                try {
+                    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                    cameraStream.srcObject = stream;
+                    cameraStream.style.display = 'block';
+                } catch (error) {
+                    console.error("Error accessing the camera: ", error);
+                    alert("Could not access the camera. Please ensure you have given permission.");
+                }
+            } else {
+                alert("Your browser does not support camera access.");
+            }
+        });
+    </script>
+{% endblock %}

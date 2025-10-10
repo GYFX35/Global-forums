@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Cultural Tourism - Arts and Talents Promotion{% endblock %}
+
+{% block content %}
+    <h1>Cultural Tourism Destinations</h1>
+
+    <div class="content-section">
+        <h2>Kyoto, Japan</h2>
+        <img src="{{ url_for('static', filename='images/kyoto.jpg') }}" alt="Kyoto Temple">
+        <p>Kyoto is famous for its classical Buddhist temples, as well as its gardens, imperial palaces, Shinto shrines and traditional wooden houses. It is also known for formal traditions such as kaiseki dining, consisting of multiple courses of precise dishes, and geisha, female entertainers often found in the Gion district.</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Machu Picchu, Peru</h2>
+        <img src="{{ url_for('static', filename='images/machu_picchu.jpg') }}" alt="Machu Picchu">
+        <p>Machu Picchu is an Incan citadel set high in the Andes Mountains in Peru, above the Urubamba River valley. Built in the 15th century and later abandoned, it’s renowned for its sophisticated dry-stone walls that fuse huge blocks without the use of mortar, intriguing buildings that play on astronomical alignments and panoramic views.</p>
+    </div>
+{% endblock %}
