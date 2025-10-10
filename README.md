@@ -36,6 +36,28 @@ We welcome contributions from the community! If you'd like to contribute, please
 4. Push your changes to your fork.
 5. Submit a pull request.
 
+## Deployment
+
+This project can be deployed using Docker.
+
+### Building the Docker Image
+
+To build the Docker image, run the following command from the root of the project:
+
+```bash
+docker build -t arts-and-talents .
+```
+
+### Running the Docker Container
+
+To run the Docker container, use the following command:
+
+```bash
+docker run -p 5001:5001 arts-and-talents
+```
+
+The application will be accessible at `http://localhost:5001`.
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
