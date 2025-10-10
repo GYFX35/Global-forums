@@ -18,5 +18,13 @@ def index():
     sample_artist.add_to_portfolio("Abstract Cityscape")
     return render_template('index.html', artist=sample_artist)
 
+@app.route('/dance')
+def dance():
+    return render_template('dance.html')
+
+@app.route('/tourism')
+def tourism():
+    return render_template('tourism.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)

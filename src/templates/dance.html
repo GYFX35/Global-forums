@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Traditional Dance - Arts and Talents Promotion{% endblock %}
+
+{% block content %}
+    <h1>Traditional Dances Around the World</h1>
+
+    <div class="content-section">
+        <h2>Samba - Brazil</h2>
+        <img src="{{ url_for('static', filename='images/samba.jpg') }}" alt="Samba Dancers">
+        <p>Samba is a lively and rhythmical dance of Afro-Brazilian origin. It is known for its festive and carnival-like atmosphere, and it's a symbol of Brazilian national identity.</p>
+    </div>
+
+    <div class="content-section">
+        <h2>Kathakali - India</h2>
+        <img src="{{ url_for('static', filename='images/kathakali.jpg') }}" alt="Kathakali Performer">
+        <p>Kathakali is a major form of classical Indian dance. It is a "story play" genre of art, but one distinguished by the elaborately colorful make-up, costumes and face masks that the traditionally male actor-dancers wear.</p>
+    </div>
+{% endblock %}
