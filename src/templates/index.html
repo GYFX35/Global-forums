@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arts and Talents Promotion</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .profile {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .portfolio li {
+            list-style-type: none;
+            background: #eee;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Arts and Talents Promotion Platform!</h1>
+
+        <div class="profile">
+            <h2>Artist Profile</h2>
+            <p><strong>Name:</strong> {{ artist.name }}</p>
+            <p><strong>Genre:</strong> {{ artist.genre }}</p>
+            <p><strong>Location:</strong> {{ artist.location }}</p>
+            <h3>Portfolio</h3>
+            <ul class="portfolio">
+                {% for piece in artist.portfolio %}
+                <li>{{ piece }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <p style="margin-top: 20px; color: #777;">This is a simple demonstration of the artist profile feature.</p>
+    </div>
+</body>
+</html>
