@@ -26,5 +26,9 @@ def dance():
 def tourism():
     return render_template('tourism.html')
 
+@app.route('/animal_husbandry')
+def animal_husbandry():
+    return render_template('animal_husbandry.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)

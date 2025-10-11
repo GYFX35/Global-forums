@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Sustainable Animal Husbandry - Learning Tools{% endblock %}
+
+{% block content %}
+    <h1>Sustainable Animal Husbandry</h1>
+    <p>This section is dedicated to providing learning tools and resources for sustainable practices in animal husbandry. Our goal is to promote methods that are environmentally sound, economically viable, and socially responsible.</p>
+
+    <div class="content-section">
+        <h2>Rotational Grazing</h2>
+        <img src="{{ url_for('static', filename='images/rotational_grazing.jpg') }}" alt="Cattle in a pasture">
+        <p>Rotational grazing is a practice where livestock are moved between pastures to allow the land to recover. This method improves soil health, increases biodiversity, and enhances animal welfare.</p>
+        <a href="#">Learn more about rotational grazing...</a>
+    </div>
+
+    <div class="content-section">
+        <h2>Water Conservation</h2>
+        <img src="{{ url_for('static', filename='images/water_conservation.jpg') }}" alt="Water trough for livestock">
+        <p>Water is a critical resource in agriculture. This section explores innovative techniques for water conservation, including rainwater harvesting, efficient irrigation systems, and drought-resistant forage.</p>
+        <a href="#">Explore water conservation techniques...</a>
+    </div>
+
+    <div class="content-section">
+        <h2>Animal Welfare</h2>
+        <img src="{{ url_for('static', filename='images/animal_welfare.jpg') }}" alt="Happy chickens in a field">
+        <p>High standards of animal welfare are essential for sustainable and ethical farming. Learn about best practices for housing, nutrition, and healthcare that ensure animals lead healthy and comfortable lives.</p>
+        <a href="#">Read our animal welfare guidelines...</a>
+    </div>
+{% endblock %}
