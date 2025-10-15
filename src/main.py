@@ -30,5 +30,9 @@ def tourism():
 def animal_husbandry():
     return render_template('animal_husbandry.html')
 
+@app.route('/startups')
+def startups():
+    return render_template('startups.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)

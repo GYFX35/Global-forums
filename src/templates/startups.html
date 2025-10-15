@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Startups & Entrepreneurship - Promotion Platform{% endblock %}
+
+{% block content %}
+    <h1>Startups & Entrepreneurship Hub</h1>
+    <p>Welcome to the hub for innovation and entrepreneurship. This section is dedicated to promoting startups, sharing success stories, and providing valuable resources for aspiring entrepreneurs.</p>
+
+    <div class="content-section">
+        <h2>Featured Startup: GreenTech Solutions</h2>
+        <img src="{{ url_for('static', filename='images/startup_greentech.jpg') }}" alt="GreenTech Solutions Logo">
+        <p>GreenTech Solutions is a startup revolutionizing the renewable energy sector with its innovative solar panel technology. Their mission is to make clean energy accessible and affordable for everyone.</p>
+        <a href="#">Read the GreenTech success story...</a>
+    </div>
+
+    <div class="content-section">
+        <h2>Entrepreneurship Resources</h2>
+        <ul>
+            <li><a href="#">Funding Opportunities for New Ventures</a></li>
+            <li><a href="#">Mentorship Programs for Young Entrepreneurs</a></li>
+            <li><a href="#">Legal and Business Setup Guides</a></li>
+            <li><a href="#">Networking Events and Workshops</a></li>
+        </ul>
+    </div>
+
+    <div class="content-section">
+        <h2>Submit Your Startup</h2>
+        <p>Are you a founder looking to get your startup featured? We'd love to hear from you. Share your story and join our community of innovators.</p>
+        <a href="#">Submit your startup for promotion...</a>
+    </div>
+{% endblock %}
