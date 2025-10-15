@@ -34,5 +34,9 @@ def animal_husbandry():
 def startups():
     return render_template('startups.html')
 
+@app.route('/diplomacy')
+def diplomacy():
+    return render_template('diplomacy.html')
+
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
