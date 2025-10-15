@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Global Diplomacy Forums - Promotion Platform{% endblock %}
+
+{% block content %}
+    <h1>Global Diplomacy Forums</h1>
+    <p>This section provides an overview of key international forums where global diplomacy takes place. Understanding these forums is crucial for appreciating the complexities of international relations.</p>
+
+    <div class="content-section">
+        <h2>United Nations General Assembly (UNGA)</h2>
+        <img src="{{ url_for('static', filename='images/unga.jpg') }}" alt="United Nations General Assembly Hall">
+        <p>The UN General Assembly is the main deliberative, policymaking, and representative organ of the UN. All 193 Member States of the UN are represented in the General Assembly, making it the only UN body with universal representation.</p>
+        <a href="#">Learn more about the UNGA...</a>
+    </div>
+
+    <div class="content-section">
+        <h2>World Economic Forum (WEF)</h2>
+        <img src="{{ url_for('static', filename='images/wef.jpg') }}" alt="World Economic Forum Logo">
+        <p>The World Economic Forum is an international non-governmental and lobbying organisation based in Cologny, canton of Geneva, Switzerland. It was founded on 24 January 1971 by German engineer and economist Klaus Schwab. The foundation, which is mostly funded by its 1,000 member companies – typically global enterprises with more than five billion US dollars in turnover – as well as public subsidies, views its own mission as "improving the state of the world by engaging business, political, academic, and other leaders of society to shape global, regional, and industry agendas".</p>
+        <a href="#">Explore the WEF's agenda...</a>
+    </div>
+{% endblock %}
