@@ -1,66 +1,54 @@
-# Arts and Talents Promotion
+<header>
 
-This project is a platform designed to promote artists and their talents. It provides a space for artists to showcase their work, connect with other artists, and find opportunities.
+<!--
+  <<< Author notes: Course header >>>
+  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
+  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
+  Add your open source license, GitHub uses MIT license.
+-->
 
-## Features
+# GitHub Pages
 
-* **Artist Profiles:** Create and customize your artist profile.
-* **Portfolio Showcase:** Upload and display your artwork, music, or other creative projects.
-* **Events and Opportunities:** Discover and apply for events, exhibitions, and other opportunities.
-* **Community Hub:** Connect with other artists, collaborate on projects, and share your experiences.
-* **Cultural Pages:** Explore pages dedicated to traditional dance and cultural tourism.
-* **Learning Tools:** Access learning resources for sustainable animal husbandry.
-* **Startup Hub:** Discover and promote innovative startups.
+_Create a site or blog from your GitHub repositories with GitHub Pages._
 
-## Getting Started
+</header>
 
-To get started with the project, follow these steps:
+<!--
+  <<< Author notes: Step 1 >>>
+  Choose 3-5 steps for your course.
+  The first step is always the hardest, so pick something easy!
+  Link to docs.github.com for further explanations.
+  Encourage users to open new tabs for steps!
+-->
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/arts-and-talents.git
-   ```
-2. **Install the dependencies:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Run the application:**
-   ```bash
-   python src/main.py
-   ```
+## Step 1: Enable GitHub Pages
 
-## Deployment
+_Welcome to GitHub Pages and Jekyll :tada:!_
 
-This project can be deployed using Docker.
+The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
 
-### Building the Docker Image
+### :keyboard: Activity: Enable GitHub Pages
 
-To build the Docker image, run the following command from the root of the project:
+1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
+1. Under your repository name, click **Settings**.
+1. Click **Pages** in the **Code and automation** section.
+1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
+1. Click the **Save** button.
+1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
+   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
 
-```bash
-docker build -t arts-and-talents .
-```
+<footer>
 
-### Running the Docker Container
+<!--
+  <<< Author notes: Footer >>>
+  Add a link to get support, GitHub status page, code of conduct, license link.
+-->
 
-To run the Docker container, use the following command:
+---
 
-```bash
-docker run -p 5001:5001 arts-and-talents
-```
+Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
 
-The application will be accessible at `http://localhost:5001`.
+&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
-## Contributing
-
-We welcome contributions from the community! If you'd like to contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch for your feature or bug fix.
-3. Make your changes and commit them with a descriptive message.
-4. Push your changes to your fork.
-5. Submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+</footer>
