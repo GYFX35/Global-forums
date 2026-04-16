@@ -3,27 +3,51 @@
 {% block title %}Sustainable Animal Husbandry - Learning Tools{% endblock %}
 
 {% block content %}
-    <h1>Sustainable Animal Husbandry</h1>
-    <p>This section is dedicated to providing learning tools and resources for sustainable practices in animal husbandry. Our goal is to promote methods that are environmentally sound, economically viable, and socially responsible.</p>
-
-    <div class="content-section">
-        <h2>Rotational Grazing</h2>
-        <img src="{{ url_for('static', filename='images/rotational_grazing.jpg') }}" alt="Cattle in a pasture">
-        <p>Rotational grazing is a practice where livestock are moved between pastures to allow the land to recover. This method improves soil health, increases biodiversity, and enhances animal welfare.</p>
-        <a href="#">Learn more about rotational grazing...</a>
+    <div class="row mb-5 text-center">
+        <div class="col-md-12">
+            <h1 class="display-5 text-success">Sustainable Animal Husbandry</h1>
+            <p class="lead">Promoting practices that are environmentally sound, economically viable, and socially responsible.</p>
+        </div>
     </div>
 
-    <div class="content-section">
-        <h2>Water Conservation</h2>
-        <img src="{{ url_for('static', filename='images/water_conservation.jpg') }}" alt="Water trough for livestock">
-        <p>Water is a critical resource in agriculture. This section explores innovative techniques for water conservation, including rainwater harvesting, efficient irrigation systems, and drought-resistant forage.</p>
-        <a href="#">Explore water conservation techniques...</a>
-    </div>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Cattle in a pasture" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Rotational Grazing</h5>
+                    <p class="card-text">Rotational grazing improves soil health, increases biodiversity, and enhances animal welfare by moving livestock between pastures.</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <a href="#" class="btn btn-outline-success w-100">Learn More</a>
+                </div>
+            </div>
+        </div>
 
-    <div class="content-section">
-        <h2>Animal Welfare</h2>
-        <img src="{{ url_for('static', filename='images/animal_welfare.jpg') }}" alt="Happy chickens in a field">
-        <p>High standards of animal welfare are essential for sustainable and ethical farming. Learn about best practices for housing, nutrition, and healthcare that ensure animals lead healthy and comfortable lives.</p>
-        <a href="#">Read our animal welfare guidelines...</a>
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="https://images.unsplash.com/photo-1594498653385-d5172b532c00?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Water trough" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Water Conservation</h5>
+                    <p class="card-text">Explore techniques like rainwater harvesting, efficient irrigation, and drought-resistant forage for better water management.</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <a href="#" class="btn btn-outline-success w-100">Explore Techniques</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Happy chickens" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Animal Welfare</h5>
+                    <p class="card-text">Learn about best practices for housing, nutrition, and healthcare that ensure animals lead healthy and comfortable lives.</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                    <a href="#" class="btn btn-outline-success w-100">Read Guidelines</a>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

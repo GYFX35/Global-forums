@@ -3,17 +3,32 @@
 {% block title %}Traditional Dance - Arts and Talents Promotion{% endblock %}
 
 {% block content %}
-    <h1>Traditional Dances Around the World</h1>
-
-    <div class="content-section">
-        <h2>Samba - Brazil</h2>
-        <img src="{{ url_for('static', filename='images/samba.jpg') }}" alt="Samba Dancers">
-        <p>Samba is a lively and rhythmical dance of Afro-Brazilian origin. It is known for its festive and carnival-like atmosphere, and it's a symbol of Brazilian national identity.</p>
+    <div class="row mb-5">
+        <div class="col-md-12 text-center">
+            <h1 class="display-5">Traditional Dances Around the World</h1>
+            <p class="lead">Celebrating heritage and movement from different cultures.</p>
+        </div>
     </div>
 
-    <div class="content-section">
-        <h2>Kathakali - India</h2>
-        <img src="{{ url_for('static', filename='images/kathakali.jpg') }}" alt="Kathakali Performer">
-        <p>Kathakali is a major form of classical Indian dance. It is a "story play" genre of art, but one distinguished by the elaborately colorful make-up, costumes and face masks that the traditionally male actor-dancers wear.</p>
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Samba Dancers" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h2 class="card-title">Samba - Brazil</h2>
+                    <p class="card-text">Samba is a lively and rhythmical dance of Afro-Brazilian origin. It is known for its festive and carnival-like atmosphere, and it's a symbol of Brazilian national identity.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1514222139-b576bb5ce006?auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Kathakali Performer" style="height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h2 class="card-title">Kathakali - India</h2>
+                    <p class="card-text">Kathakali is a major form of classical Indian dance. It is a "story play" genre of art, but one distinguished by the elaborately colorful make-up, costumes and face masks that the traditionally male actor-dancers wear.</p>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}

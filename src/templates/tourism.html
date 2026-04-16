@@ -3,17 +3,34 @@
 {% block title %}Cultural Tourism - Arts and Talents Promotion{% endblock %}
 
 {% block content %}
-    <h1>Cultural Tourism Destinations</h1>
-
-    <div class="content-section">
-        <h2>Kyoto, Japan</h2>
-        <img src="{{ url_for('static', filename='images/kyoto.jpg') }}" alt="Kyoto Temple">
-        <p>Kyoto is famous for its classical Buddhist temples, as well as its gardens, imperial palaces, Shinto shrines and traditional wooden houses. It is also known for formal traditions such as kaiseki dining, consisting of multiple courses of precise dishes, and geisha, female entertainers often found in the Gion district.</p>
+    <div class="row mb-5 text-center">
+        <div class="col-md-12">
+            <h1 class="display-5 text-primary">Cultural Tourism Destinations</h1>
+            <p class="lead">Discover the world's most breathtaking cultural sites.</p>
+        </div>
     </div>
 
-    <div class="content-section">
-        <h2>Machu Picchu, Peru</h2>
-        <img src="{{ url_for('static', filename='images/machu_picchu.jpg') }}" alt="Machu Picchu">
-        <p>Machu Picchu is an Incan citadel set high in the Andes Mountains in Peru, above the Urubamba River valley. Built in the 15th century and later abandoned, it’s renowned for its sophisticated dry-stone walls that fuse huge blocks without the use of mortar, intriguing buildings that play on astronomical alignments and panoramic views.</p>
+    <div class="row align-items-center mb-5 bg-white shadow-sm rounded overflow-hidden">
+        <div class="col-md-6 p-0">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="Kyoto Temple">
+        </div>
+        <div class="col-md-6 p-5">
+            <h2 class="h3">Kyoto, Japan</h2>
+            <p class="text-muted">Kyoto is famous for its classical Buddhist temples, as well as its gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
+            <p>It is also known for formal traditions such as kaiseki dining, consisting of multiple courses of precise dishes, and geisha, female entertainers often found in the Gion district.</p>
+            <button class="btn btn-primary mt-3">Explore Kyoto</button>
+        </div>
+    </div>
+
+    <div class="row align-items-center mb-5 bg-white shadow-sm rounded overflow-hidden flex-md-row-reverse">
+        <div class="col-md-6 p-0">
+            <img src="https://images.unsplash.com/photo-1587595431973-160d0d94add1?auto=format&fit=crop&w=800&q=80" class="img-fluid" alt="Machu Picchu">
+        </div>
+        <div class="col-md-6 p-5">
+            <h2 class="h3">Machu Picchu, Peru</h2>
+            <p class="text-muted">Machu Picchu is an Incan citadel set high in the Andes Mountains in Peru, above the Urubamba River valley.</p>
+            <p>Built in the 15th century and later abandoned, it’s renowned for its sophisticated dry-stone walls that fuse huge blocks without the use of mortar, intriguing buildings that play on astronomical alignments and panoramic views.</p>
+            <button class="btn btn-primary mt-3">Discover Machu Picchu</button>
+        </div>
     </div>
 {% endblock %}

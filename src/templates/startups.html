@@ -3,29 +3,55 @@
 {% block title %}Startups & Entrepreneurship - Promotion Platform{% endblock %}
 
 {% block content %}
-    <h1>Startups & Entrepreneurship Hub</h1>
-    <p>Welcome to the hub for innovation and entrepreneurship. This section is dedicated to promoting startups, sharing success stories, and providing valuable resources for aspiring entrepreneurs.</p>
-
-    <div class="content-section">
-        <h2>Featured Startup: GreenTech Solutions</h2>
-        <img src="{{ url_for('static', filename='images/startup_greentech.jpg') }}" alt="GreenTech Solutions Logo">
-        <p>GreenTech Solutions is a startup revolutionizing the renewable energy sector with its innovative solar panel technology. Their mission is to make clean energy accessible and affordable for everyone.</p>
-        <a href="#">Read the GreenTech success story...</a>
+    <div class="row mb-5 text-center">
+        <div class="col-md-12">
+            <h1 class="display-5 text-dark">Startups & Entrepreneurship Hub</h1>
+            <p class="lead text-muted">Empowering innovators and sharing success stories.</p>
+        </div>
     </div>
 
-    <div class="content-section">
-        <h2>Entrepreneurship Resources</h2>
-        <ul>
-            <li><a href="#">Funding Opportunities for New Ventures</a></li>
-            <li><a href="#">Mentorship Programs for Young Entrepreneurs</a></li>
-            <li><a href="#">Legal and Business Setup Guides</a></li>
-            <li><a href="#">Networking Events and Workshops</a></li>
-        </ul>
-    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card shadow-sm mb-4 border-primary">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=400&q=80" class="img-fluid rounded-start h-100" alt="GreenTech Solutions" style="object-fit: cover;">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="badge bg-primary me-2">Featured</span> GreenTech Solutions</h5>
+                            <p class="card-text">GreenTech Solutions is revolutionizing the renewable energy sector with its innovative solar panel technology. Their mission is to make clean energy accessible and affordable for everyone.</p>
+                            <a href="#" class="btn btn-primary">Read Success Story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <div class="content-section">
-        <h2>Submit Your Startup</h2>
-        <p>Are you a founder looking to get your startup featured? We'd love to hear from you. Share your story and join our community of innovators.</p>
-        <a href="#">Submit your startup for promotion...</a>
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-rocket me-2"></i>Entrepreneurship Resources</h5>
+                    <div class="list-group list-group-flush mt-3">
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Funding Opportunities for New Ventures
+                            <span class="badge bg-info rounded-pill">New</span>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">Mentorship Programs for Young Entrepreneurs</a>
+                        <a href="#" class="list-group-item list-group-item-action">Legal and Business Setup Guides</a>
+                        <a href="#" class="list-group-item list-group-item-action">Networking Events and Workshops</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card bg-light shadow-sm">
+                <div class="card-body text-center">
+                    <i class="fas fa-lightbulb fa-3x text-warning mb-3"></i>
+                    <h5 class="card-title">Submit Your Startup</h5>
+                    <p class="card-text">Are you a founder looking to get your startup featured? Join our community of innovators.</p>
+                    <a href="#" class="btn btn-warning w-100">Submit Now</a>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
