@@ -18,8 +18,17 @@
                     <h2 class="card-title">{{ artist.name }}</h2>
                     <p class="card-text"><strong>Genre:</strong> {{ artist.genre }}</p>
                     <p class="card-text"><strong>Location:</strong> {{ artist.location }}</p>
-                    <button id="start-camera" class="btn btn-outline-primary w-100"><i class="fas fa-camera me-2"></i>Access Camera</button>
-                    <video id="camera-stream" autoplay class="mt-3 w-100 rounded" style="display: none;"></video>
+                    <button id="start-camera" class="btn btn-outline-primary w-100 mb-2"><i class="fas fa-camera me-2"></i>Access Camera</button>
+                    <div id="camera-container" style="display: none;">
+                        <video id="camera-stream" autoplay class="mt-2 w-100 rounded"></video>
+                        <button id="capture-photo" class="btn btn-primary w-100 mt-2"><i class="fas fa-circle me-2"></i>Capture Photo</button>
+                    </div>
+                    <canvas id="photo-canvas" style="display: none;"></canvas>
+                    <div id="photo-preview-container" class="mt-3" style="display: none;">
+                        <h6>Captured Photo:</h6>
+                        <img id="photo-preview" class="img-fluid rounded shadow-sm">
+                        <button id="download-photo" class="btn btn-success btn-sm w-100 mt-2"><i class="fas fa-download me-2"></i>Download Photo</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -58,14 +67,21 @@
 
     <script>
         const startCameraButton = document.getElementById('start-camera');
+        const cameraContainer = document.getElementById('camera-container');
         const cameraStream = document.getElementById('camera-stream');
+        const capturePhotoButton = document.getElementById('capture-photo');
+        const photoCanvas = document.getElementById('photo-canvas');
+        const photoPreviewContainer = document.getElementById('photo-preview-container');
+        const photoPreview = document.getElementById('photo-preview');
+        const downloadPhotoButton = document.getElementById('download-photo');
 
         startCameraButton.addEventListener('click', async () => {
             if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
                 try {
                     const stream = await navigator.mediaDevices.getUserMedia({ video: true });
                     cameraStream.srcObject = stream;
-                    cameraStream.style.display = 'block';
+                    cameraContainer.style.display = 'block';
+                    startCameraButton.style.display = 'none';
                 } catch (error) {
                     console.error("Error accessing the camera: ", error);
                     alert("Could not access the camera. Please ensure you have given permission.");
@@ -73,6 +89,24 @@
             } else {
                 alert("Your browser does not support camera access.");
             }
+        });
+
+        capturePhotoButton.addEventListener('click', () => {
+            const context = photoCanvas.getContext('2d');
+            photoCanvas.width = cameraStream.videoWidth;
+            photoCanvas.height = cameraStream.videoHeight;
+            context.drawImage(cameraStream, 0, 0, photoCanvas.width, photoCanvas.height);
+
+            const imageData = photoCanvas.toDataURL('image/png');
+            photoPreview.src = imageData;
+            photoPreviewContainer.style.display = 'block';
+        });
+
+        downloadPhotoButton.addEventListener('click', () => {
+            const link = document.createElement('a');
+            link.download = 'captured-photo.png';
+            link.href = photoPreview.src;
+            link.click();
         });
     </script>
 {% endblock %}
